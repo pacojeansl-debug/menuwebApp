@@ -60,41 +60,49 @@ export default function Menu() {
         name: "Volcán al Pastor",
         price: 35,
         description: "Tortilla dorada con pastor y queso gratinado",
+        image: "/volcan.png"
       },
       {
         name: "Volcán de Suadero",
         price: 38,
         description: "Suadero con queso fundido",
+        image: "/volcan.png"
       },
       {
         name: "Volcán de Bistec",
         price: 38,
         description: "Bistec con queso gratinado",
+        image: "/volcan.png"
       },
       {
         name: "Volcán Campechano",
         price: 40,
         description: "Mezcla de carnes con queso",
+        image: "/volcan.png"
       },
       {
         name: "Volcán de Longaniza",
         price: 35,
         description: "Longaniza con queso fundido",
+        image: "/volcan.png"
       },
       {
         name: "Volcán de Tripa",
         price: 42,
         description: "Tripa dorada con queso",
+        image: "/volcan.png"
       },
       {
         name: "Volcán de Pollo",
         price: 34,
         description: "Pollo con queso gratinado",
+        image: "/volcan.png"
       },
       {
         name: "Volcán Vegetariano",
         price: 33,
         description: "Nopales y champiñones con queso",
+        image: "/volcan.png"
       },
     ],
 
@@ -124,7 +132,7 @@ export default function Menu() {
   const categories = ["tacos", "volcanes", "bebidas", "postres"];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center">
+    
       <div className="w-full max-w-sm bg-white shadow-lg">
 
         {/* HEADER */}
@@ -188,6 +196,6 @@ export default function Menu() {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 }
