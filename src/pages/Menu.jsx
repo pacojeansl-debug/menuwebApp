@@ -179,7 +179,7 @@ export default function Menu() {
               </div>
 
               {/* imagen placeholder */}
-              <div className="w-full h-28 mb-3">
+              <div className="w-full h-34 mb-1">
                 <img
                   src={item.image || "/taco.jpg"}
                   alt={item.name}
