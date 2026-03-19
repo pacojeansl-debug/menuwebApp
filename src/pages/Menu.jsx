@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Menu() {
   const [category, setCategory] = useState("tacos");
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const menuData = {
     tacos: [
@@ -132,70 +133,116 @@ export default function Menu() {
   const categories = ["tacos", "volcanes", "bebidas", "postres"];
 
   return (
-    
-      <div className="w-full bg-white">
 
-        {/* HEADER */}
-        <div className="p-2 text-center font-semibold text-lg flex items-center justify-center">
-          <img
-            src="/logoMenu.svg"
-            alt="logo tacos"
-            className=" w-20" />
+    <div className="w-full bg-white">
 
-        </div>
+      {/* HEADER */}
+      <div className="p-2 text-center font-semibold text-lg flex items-center justify-center">
+        <img
+          src="/logoMenu.svg"
+          alt="logo tacos"
+          className=" w-20" />
 
-        {/* CATEGORIAS */}
-        <div className="sticky top-0 bg-orange-600 text-white flex justify-around py-3 text-sm z-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setCategory(cat)}
-              className={`capitalize ${category === cat
-                ? "border-b-2 border-white font-semibold"
-                : "opacity-70"
-                }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex justify-center text-center p-2 pb-3">
-          <p className="text-3xl text-orange-600 font-bold capitalize">
-            {category}
-          </p>
-        </div>
-
-        {/* GRID */}
-        <div className="grid grid-cols-2 gap-4 pb-8 pr-3 pl-3">
-          {menuData[category].map((item, index) => (
-            <div
-              key={index}
-              className="bg-orange-500 text-white rounded-xl p-3 shadow"
-            >
-              <div className="flex justify-between text-xs mb-2">
-                <span>Disponible</span>
-                <span>${item.price}</span>
-              </div>
-
-              {/* imagen placeholder */}
-              <div className="w-full h-34 mb-1">
-                <img
-                  src={item.image || "/taco.jpg"}
-                  alt={item.name}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-
-              <h3 className="text-sm font-semibold">{item.name}</h3>
-
-              <p className="text-xs opacity-90">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
-    
+
+      {/* CATEGORIAS */}
+      <div className="sticky top-0 bg-orange-600 text-white flex justify-around py-3 text-sm z-10">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setCategory(cat)}
+            className={`capitalize ${category === cat
+              ? "border-b-2 border-white font-semibold"
+              : "opacity-70"
+              }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex justify-center text-center p-2 pb-3">
+        <p className="text-3xl text-orange-600 font-bold capitalize">
+          {category}
+        </p>
+      </div>
+
+      {/* GRID */}
+      <div className="grid grid-cols-2 gap-4 pb-8 pr-3 pl-3">
+        {menuData[category].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => setSelectedItem(item)}
+            className="bg-orange-500 text-white rounded-xl p-3 shadow cursor-pointer active:scale-95 transition"
+          >
+            <div className="flex justify-between text-xs mb-2">
+              <span>Disponible</span>
+              <span>${item.price}</span>
+            </div>
+
+            {/* imagen placeholder */}
+            <div className="w-full h-34 mb-1">
+              <img
+                src={item.image || "/taco.jpg"}
+                alt={item.name}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+
+            <h3 className="text-sm font-semibold">{item.name}</h3>
+
+            {/* <p className="text-xs opacity-90">
+              {item.description}
+            </p> */}
+          </div>
+        ))}
+      </div>
+
+      {selectedItem && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+
+          <div className="bg-white rounded-2xl w-full max-w-sm p-4 relative animate-fadeIn">
+
+            {/* BOTON CERRAR */}
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute top-2 right-2 text-gray-500 text-xl"
+            >
+              ✕
+            </button>
+
+            {/* IMAGEN */}
+            <div className="w-full h-40 mb-3">
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.name}
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+
+            {/* INFO */}
+            <h2 className="text-xl font-bold text-orange-600 mb-1">
+              {selectedItem.name}
+            </h2>
+
+            <p className="text-gray-600 text-sm mb-3">
+              {selectedItem.description}
+            </p>
+
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-orange-600">
+                ${selectedItem.price}
+              </span>
+
+              <span className="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full">
+                Disponible
+              </span>
+            </div>
+
+          </div>
+        </div>
+      )}
+    </div>
+
   );
 }
