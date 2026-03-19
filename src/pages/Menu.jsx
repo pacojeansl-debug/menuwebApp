@@ -55,7 +55,7 @@ export default function Menu() {
       },
     ],
 
-    tacoes: [
+    volcanes: [
       {
         name: "Volcán al Pastor",
         price: 35,
@@ -107,14 +107,14 @@ export default function Menu() {
     ],
 
     bebidas: [
-      { name: "Agua de Horchata", price: 25, description: "500ml,", image: "/taco.jpg" },
-      { name: "Agua de Jamaica", price: 25, description: "500ml,", image: "/taco.jpg" },
-      { name: "Refresco Cola", price: 28, description: "600ml,", image: "/taco.jpg" },
-      { name: "Refresco Naranja", price: 28, description: "600ml,", image: "/taco.jpg" },
-      { name: "Agua Mineral", price: 30, description: "600ml,", image: "/taco.jpg" },
-      { name: "Cerveza", price: 35, description: "355ml,", image: "/taco.jpg" },
-      { name: "Limonada", price: 27, description: "500ml,", image: "/taco.jpg" },
-      { name: "Naranjada", price: 27, description: "500ml,", image: "/taco.jpg" },
+      { name: "Agua de Horchata", price: 25, description: "500ml", image: "/taco.jpg" },
+      { name: "Agua de Jamaica", price: 25, description: "500ml", image: "/taco.jpg" },
+      { name: "Refresco Cola", price: 28, description: "600ml", image: "/taco.jpg" },
+      { name: "Refresco Naranja", price: 28, description: "600ml", image: "/taco.jpg" },
+      { name: "Agua Mineral", price: 30, description: "600ml", image: "/taco.jpg" },
+      { name: "Cerveza", price: 35, description: "355ml", image: "/taco.jpg" },
+      { name: "Limonada", price: 27, description: "500ml", image: "/taco.jpg" },
+      { name: "Naranjada", price: 27, description: "500ml", image: "/taco.jpg" },
     ],
 
     postres: [
@@ -129,18 +129,18 @@ export default function Menu() {
     ],
   };
 
-  const categories = ["tacos", "tacoes", "bebidas", "postres"];
+  const categories = ["tacos", "volcanes", "bebidas", "postres"];
 
   return (
     
       <div className="w-full bg-white">
 
         {/* HEADER */}
-        <div className="p-2 pt-3 pb-3 text-center font-semibold text-lg flex items-center justify-center">
+        <div className="p-2 text-center font-semibold text-lg flex items-center justify-center">
           <img
             src="/logoMenu.svg"
             alt="logo tacos"
-            className=" w-15" />
+            className=" w-20" />
 
         </div>
 
@@ -160,8 +160,8 @@ export default function Menu() {
           ))}
         </div>
 
-        <div className="flex justify-center text-center p-2">
-          <p className="text-2xl text-orange-600 font-bold capitalize">
+        <div className="flex justify-center text-center p-2 pb-3">
+          <p className="text-3xl text-orange-600 font-bold capitalize">
             {category}
           </p>
         </div>
