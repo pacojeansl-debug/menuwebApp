@@ -11,28 +11,28 @@ export default function Menu3() {
         price: 55,
         description:
           "Suave mezcla de espresso con leche vaporizada y una ligera capa de espuma. Perfecto para quienes buscan un café cremoso y equilibrado.",
-        image: "/Latte.png",
+        image: "/Latte.webp",
       },
       {
         name: "Capuccino",
         price: 60,
         description:
           "Clásico italiano con espresso intenso, leche caliente y abundante espuma. Ideal para disfrutar un sabor fuerte pero suave al mismo tiempo.",
-        image: "/Capuccino.png",
+        image: "/Capuccino.webp",
       },
       {
         name: "Americano",
         price: 45,
         description:
           "Café negro preparado con espresso y agua caliente. Ligero, aromático y perfecto para quienes prefieren un sabor más puro.",
-        image: "/Americano.png",
+        image: "/Americano.webp",
       },
       {
         name: "Mocha",
         price: 65,
         description:
           "Deliciosa combinación de café espresso con chocolate y leche. Dulce, cremoso y perfecto para los amantes del chocolate.",
-        image: "/Mocha.png",
+        image: "/Mocha.webp",
       },
     ],
     frappes: [
@@ -41,21 +41,21 @@ export default function Menu3() {
         price: 75,
         description:
           "Bebida fría mezclada con galleta Oreo, hielo y crema. Refrescante, dulce y con trocitos crujientes en cada sorbo.",
-        image: "/FrappeOreo.png",
+        image: "/FrappeOreo.webp",
       },
       {
         name: "Frappé Caramelo",
         price: 70,
         description:
           "Refrescante frappé con sabor a caramelo, hielo triturado y un toque de crema. Perfecto para los días calurosos.",
-        image: "/FrappeCaram.png",
+        image: "/FrappeCaram.webp",
       },
       {
         name: "Frappé Chocolate",
         price: 72,
         description:
           "Intenso frappé de chocolate con textura cremosa y fría. Ideal para un antojo dulce y refrescante.",
-        image: "/FrappeChoco.png",
+        image: "/FrappeChoco.webp",
       },
     ],
     postres: [
@@ -64,21 +64,21 @@ export default function Menu3() {
         price: 80,
         description:
           "Postre cremoso de queso con base de galleta crujiente. Suave, dulce y perfecto para acompañar con café.",
-        image: "/Cheesecake.png",
+        image: "/Cheesecake.webp",
       },
       {
         name: "Brownie",
         price: 50,
         description:
           "Bizcocho de chocolate húmedo y denso, con sabor intenso. Ideal para los amantes del chocolate.",
-        image: "/Brownie.png",
+        image: "/Brownie.webp",
       },
       {
         name: "Panqué",
         price: 45,
         description:
           "Pan dulce esponjoso y suave, perfecto para acompañar con una bebida caliente.",
-        image: "/Panque.png",
+        image: "/Panque.webp",
       },
     ],
     snacks: [
@@ -87,21 +87,21 @@ export default function Menu3() {
         price: 40,
         description:
           "Pan hojaldrado, crujiente por fuera y suave por dentro, con un ligero sabor a mantequilla.",
-        image: "/Croissant.png",
+        image: "/Croissant.webp",
       },
       {
         name: "Sandwich",
         price: 65,
         description:
           "Clásico sandwich de jamón y queso en pan suave, perfecto para un snack rápido y delicioso.",
-        image: "/Sandwich.png",
+        image: "/Sandwich.webp",
       },
       {
         name: "Bagel",
         price: 50,
         description:
           "Pan estilo bagel tostado con queso crema. Su textura firme y sabor suave lo hacen ideal para cualquier momento.",
-        image: "/Bagel.png",
+        image: "/Bagel.webp",
       },
     ],
   };
