@@ -61,49 +61,43 @@ export default function Menu() {
         name: "Volcán al Pastor",
         price: 35,
         description: "Tortilla dorada con pastor y queso gratinado",
-        image: "/taco.jpg"
+        image: "/vpastor.webp"
       },
       {
         name: "Volcán de Suadero",
         price: 38,
         description: "Suadero con queso fundido",
-        image: "/taco.jpg"
+        image: "/vsuadero.webp"
       },
       {
         name: "Volcán de Bistec",
         price: 38,
         description: "Bistec con queso gratinado",
-        image: "/taco.jpg"
+        image: "/vbistec.webp"
       },
       {
         name: "Volcán Campechano",
         price: 40,
         description: "Mezcla de carnes con queso",
-        image: "/taco.jpg"
+        image: "/vcampechano.webp"
       },
       {
         name: "Volcán de Longaniza",
         price: 35,
         description: "Longaniza con queso fundido",
-        image: "/taco.jpg"
+        image: "/vlonganiza.webp"
       },
       {
         name: "Volcán de Tripa",
         price: 42,
         description: "Tripa dorada con queso",
-        image: "/taco.jpg"
+        image: "/vtripa.webp"
       },
       {
         name: "Volcán de Pollo",
         price: 34,
         description: "Pollo con queso gratinado",
-        image: "/taco.jpg"
-      },
-      {
-        name: "Volcán Vegetariano",
-        price: 33,
-        description: "Nopales y champiñones con queso",
-        image: "/taco.jpg"
+        image: "/vpollo.webp"
       },
     ],
 
