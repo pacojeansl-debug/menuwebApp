@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Menu2 from "./pages/Menu2";
 import Menu3 from "./pages/Menu3";
+import Menu4 from "./pages/Menu4";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu2" element={<Menu2 />} />
         <Route path="/menu3" element={<Menu3 />} />
+        <Route path="/menu4" element={<Menu4 />} />
       </Routes>
     </BrowserRouter>
   );

@@ -29,6 +29,13 @@ export default function Home() {
         Menú 3
       </button>
 
+      <button
+        onClick={() => navigate("/menu4")}
+        className="bg-black text-white px-6 py-3 rounded-xl"
+      >
+        Menú 4
+      </button>
+
     </div>
   );
 }
