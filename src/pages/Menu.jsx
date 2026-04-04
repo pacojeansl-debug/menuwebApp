@@ -10,49 +10,49 @@ export default function Menu() {
         name: "Taco al Pastor",
         price: 18,
         description: "Carne al pastor con piña, cebolla y cilantro",
-        image: "/taco.jpg"
+        image: "/tpastor.webp"
       },
       {
         name: "Taco de Suadero",
         price: 20,
         description: "Suadero suave con cebolla y cilantro",
-        image: "/taco.jpg"
+        image: "/tsuadero.webp"
       },
       {
         name: "Taco de Bistec",
         price: 20,
         description: "Carne de res asada con cebolla y cilantro",
-        image: "/taco.jpg"
+        image: "/tbistec.webp"
       },
       {
         name: "Taco de Longaniza",
         price: 18,
         description: "Longaniza dorada tradicional",
-        image: "/taco.jpg"
+        image: "/tlonganiza.webp"
       },
       {
         name: "Taco Campechano",
         price: 22,
         description: "Mezcla de bistec y longaniza",
-        image: "/taco.jpg"
+        image: "/tcampechano.webp"
       },
       {
         name: "Taco de Tripa",
         price: 25,
         description: "Tripa dorada crujiente",
-        image: "/taco.jpg"
+        image: "/ttripa.webp"
       },
       {
         name: "Taco de Pollo",
         price: 18,
         description: "Pollo a la plancha con cebolla y cilantro",
-        image: "/taco.jpg"
+        image: "/tpollo.webp"
       },
       {
         name: "Taco Vegetariano",
         price: 17,
         description: "Nopales, champiñones y queso",
-        image: "/taco.jpg"
+        image: "/tvegetariano.webp"
       },
     ],
 
