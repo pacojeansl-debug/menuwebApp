@@ -1,41 +1,65 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Menu from "./Menu";
+import Menu2 from "./Menu2";
+import Menu3 from "./Menu3";
+import Menu4 from "./Menu4";
 
 export default function Home() {
-  const navigate = useNavigate();
+  const [selectedMenu, setSelectedMenu] = useState("menu1");
+
+  const renderMenu = () => {
+    switch (selectedMenu) {
+      case "menu1":
+        return <Menu />;
+      case "menu2":
+        return <Menu2 />;
+      case "menu3":
+        return <Menu3 />;
+      case "menu4":
+        return <Menu4 />;
+      default:
+        return <Menu />;
+    }
+  };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white gap-6">
+    <div className="min-h-screen bg-white">
       
-      <h1 className="text-2xl font-bold">Selecciona un menú</h1>
+      {/* Barra superior negra */}
+      <div className="w-full flex bg-black">
+        <button
+          onClick={() => setSelectedMenu("menu1")}
+          className="flex-1 text-white py-4 border border-white"
+        >
+          Menú 1
+        </button>
 
-      <button
-        onClick={() => navigate("/menu")}
-        className="bg-black text-white px-6 py-3 rounded-xl"
-      >
-        Menú 1
-      </button>
+        <button
+          onClick={() => setSelectedMenu("menu2")}
+          className="flex-1 text-white py-4 border border-white"
+        >
+          Menú 2
+        </button>
 
-      <button
-        onClick={() => navigate("/menu2")}
-        className="bg-black text-white px-6 py-3 rounded-xl"
-      >
-        Menú 2
-      </button>
+        <button
+          onClick={() => setSelectedMenu("menu3")}
+          className="flex-1 text-white py-4 border border-white"
+        >
+          Menú 3
+        </button>
 
-      <button
-        onClick={() => navigate("/menu3")}
-        className="bg-black text-white px-6 py-3 rounded-xl"
-      >
-        Menú 3
-      </button>
+        <button
+          onClick={() => setSelectedMenu("menu4")}
+          className="flex-1 text-white py-4 border border-white"
+        >
+          Menú 4
+        </button>
+      </div>
 
-      <button
-        onClick={() => navigate("/menu4")}
-        className="bg-black text-white px-6 py-3 rounded-xl"
-      >
-        Menú 4
-      </button>
-
+      {/* Contenido */}
+      <div className="">
+        {renderMenu()}
+      </div>
     </div>
   );
 }
