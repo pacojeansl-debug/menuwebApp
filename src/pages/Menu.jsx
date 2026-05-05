@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function Menu() {
   const [category, setCategory] = useState("tacos");
   const [selectedItem, setSelectedItem] = useState(null);
+  const [loadedImages, setLoadedImages] = useState({});
 
   const menuData = {
     tacos: [
@@ -175,11 +176,21 @@ export default function Menu() {
             </div>
 
             {/* imagen placeholder */}
-            <div className="w-full h-34 mb-1">
+            <div className="w-full h-[140px] mb-1 relative">
+              {!loadedImages[index] && (
+                <div className="absolute inset-0 bg-gray-300 animate-pulse rounded-lg"></div>
+              )}
+
               <img
                 src={item.image || "/taco.jpg"}
                 alt={item.name}
-                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+                decoding="async"
+                onLoad={() =>
+                  setLoadedImages((prev) => ({ ...prev, [index]: true }))
+                }
+                className={`w-full h-full object-cover rounded-lg transition-opacity duration-300 ${loadedImages[index] ? "opacity-100" : "opacity-0"
+                  }`}
               />
             </div>
 
@@ -210,6 +221,8 @@ export default function Menu() {
               <img
                 src={selectedItem.image}
                 alt={selectedItem.name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
