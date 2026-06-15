@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import Menu2 from "./Menu2";
 import Menu3 from "./Menu3";
 import Menu4 from "./Menu4";
+import Agenda from "./Agenda";
 
 export default function Home() {
   const [selectedMenu, setSelectedMenu] = useState("menu1");
@@ -17,6 +18,8 @@ export default function Home() {
         return <Menu3 />;
       case "menu4":
         return <Menu4 />;
+      case "agenda":
+        return <Agenda />;
       default:
         return <Menu />;
     }
@@ -24,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      
+
       {/* Barra superior negra */}
       <div className="w-full flex bg-black">
         <button
@@ -53,6 +56,13 @@ export default function Home() {
           className="flex-1 text-white py-4 border border-white"
         >
           Menú 4
+        </button>
+
+        <button
+          onClick={() => setSelectedMenu("agenda")}
+          className="flex-1 text-white py-4 border border-white"
+        >
+          Agenda
         </button>
       </div>
 
