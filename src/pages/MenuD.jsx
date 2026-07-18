@@ -83,7 +83,8 @@ export default function MenuLosMixes() {
     const categories = ["tacos", "ordenes", "quesadas", "alambres", "gringas", "tortas", "especialidades", "quesos"];
 
     return (
-        <div className="w-full max-w-lg mx-auto bg-orange-50 min-h-screen pb-10">
+        // Cambia tu div principal a esto:
+        <div className="w-full max-w-lg mx-auto bg-orange-50 min-h-screen overflow-x-hidden">
 
             {/* HEADER */}
             <header className="bg-orange-600 p-6 flex flex-col items-center text-white shadow-md">
