@@ -122,7 +122,7 @@ export default function MenuLosMixes() {
             <main className="px-4 py-6 space-y-3">
                 <h2 className="text-blue-900 font-extrabold capitalize text-4xl mb-4 ml-1">{category}</h2>
                 {menuData[category]?.map((item, idx) => (
-                    <div key={idx} className="bg-white p-4 rounded-2xl shadow-sm border border-orange-100 flex justify-between items-center transition-transform active:scale-[0.98]">
+                    <div key={idx} className="bg-white p-4 rounded-2xl shadow-sm border border-orange-100 flex justify-between items-center">
                         <div className="mr-4">
                             <h3 className="font-bold text-gray-800 text-xl">{item.name}</h3>
                             <p className="text-gray-500 mt-0">{item.desc}</p>
