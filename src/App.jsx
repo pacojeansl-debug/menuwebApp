@@ -6,6 +6,7 @@ import Menu3 from "./pages/Menu3";
 import Menu4 from "./pages/Menu4";
 import Agenda from "./pages/Agenda";
 import MenuLosMixes from "./pages/MenuD";
+import MenuGorilas from "./pages/MenuGorilas";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/menu2" element={<Menu2 />} />
         <Route path="/menu3" element={<Menu3 />} />
         <Route path="/menu4" element={<Menu4 />} />
-         <Route path="/menud" element={<MenuLosMixes />} />
+        <Route path="/menud" element={<MenuLosMixes />} />
+        <Route path="/menug" element={<MenuGorilas />} />
         <Route path="/agenda" element={<Agenda />} />
       </Routes>
     </BrowserRouter>
